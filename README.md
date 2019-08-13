@@ -1,7 +1,6 @@
 # Uniify
 
-<br>
-Re-defining tutor management at UNSW
+Re-defining tutor management at UNSW, found at: https://uniify-unsw.firebaseapp.com/
 <br>
 
 # Screenshots

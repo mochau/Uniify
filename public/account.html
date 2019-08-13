@@ -1,0 +1,119 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="img/uniify.png">
+    <title>Tutor</title>
+    <style>
+        #toast-container {
+            min-width: 10%;
+            top: 70%;
+            right: 50%;
+            transform: translateX(50%) translateY(50%);
+        }
+    </style>
+</head>
+
+<body class="grey lighten-4"">
+
+    <!-- NAVBAR -->
+    <nav class=" z-depth-0 yellow accent-4">
+      <div class="nav-wrapper container">
+          <a href="#" class="brand-logo">
+              <img src="img/u_logo.png" style="width: 200px; margin-top: 5px;">
+          </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li class="logged-in">
+                  <a href="index.html" class="black-text modal-trigger" data-target="modal-account">Home</a>
+              </li>
+          </ul>
+      </div>
+      </nav>
+
+    <!-- ACCOUNT FORM -->
+    <div class="container" style="margin-top: 40px;">
+        <h4 class="center-align">Update Account Details</h4>
+        <div class="row center-align">
+            <form class="col s12" id="student-form">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix" style="margin-left: -20px;">account_circle</i>
+                        <input id="input_fn" name="fname" type="text" class="validate">
+                        <label for="input_fn">Full Name</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix" style="margin-left: -20px;">note</i>
+                        <input id="input_deg" type="text" class="validate">
+                        <label for="input_deg">Degree</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix" style="margin-left: -20px;">confirmation_number</i>
+                        <input id="input_zid" type="text" class="validate">
+                        <label for="input_zid">zID</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix" style="margin-left: -20px;">access_time</i>
+                        <input id="input_year" type="text" class="validate">
+                        <label for="input_year">Year of Study</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix" style="margin-left: -20px;">lightbulb_outline</i>
+                        <input id="input_wam" type="text" class="validate">
+                        <label for="input_wam">WAM</label>
+                    </div>
+                    <div class="input-field col s12" style="margin-bottom: 40px;">
+                        <i class="material-icons prefix" style="margin-left: -20px;">phone</i>
+                        <input id="input_phone" type="text" class="validate">
+                        <label for="input_phone">Telephone</label>
+                    </div>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="check-lic" class="filled-in"/>
+                            <span>Sign up as a LIC</span>
+                        </label>
+                    </p>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="check_code" type="text" class="validate">
+                            <label for="check_code">LIC Verification Code [Hint: ISTM]</label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit" name="action" style="margin-top: 40px;">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDddljejvrH8BvAETri3o_OksbUlplr_DY",
+            authDomain: "uniify-unsw.firebaseapp.com",
+            databaseURL: "https://uniify-unsw.firebaseio.com",
+            projectId: "uniify-unsw",
+        };
+        firebase.initializeApp(config);
+
+        // make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+    </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--   <script src="scripts/auth.js"></script>
+    <script src="scripts/login.js"></script> -->
+    <script src="scripts/account.js"></script>
+</body>
+
+</html>

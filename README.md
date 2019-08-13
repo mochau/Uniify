@@ -3,7 +3,7 @@
 Re-defining tutor management at UNSW, found at: https://uniify-unsw.firebaseapp.com/
 <br>
 
-# Screenshots
+## Screenshots
 
 <img src="https://user-images.githubusercontent.com/28518091/62940353-be227d00-be16-11e9-9ce2-29c326486903.png"></td>
 <img src="https://user-images.githubusercontent.com/28518091/62940350-bd89e680-be16-11e9-9c91-601e0af7cf7f.png"></td>
